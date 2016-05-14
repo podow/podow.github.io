@@ -1,6 +1,9 @@
 @import "font-awesome.min.css"
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300)
 
+$pink: #ff7496
+$gray: #c8cccf
+
 @mixin clear()
 	&:before
 		content: ''
@@ -27,7 +30,9 @@ body
 	padding: 0
 	width: 100%
 
-h1
+h1,
+h2,
+h3
 	text-transform: uppercase
 
 #outerWrapper
@@ -36,279 +41,237 @@ h1
 	overflow: hidden
 	position: relative
 	width: 100vw
-	#innerWrapper
-		position: absolute
-		transition: left .5s ease
-		width: 9999px
-		+clear
-		.slide
-			float: left
-			height: 100vh
+#innerWrapper
+	position: absolute
+	transition: left .5s ease
+	width: 9999px
+	+clear
+	.slide
+		float: left
+		height: 100vh
+		position: relative
+		width: 100vw
+#first
+	background-image: url("../img/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../img/01.jpg")
+	background-image: url("../img/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../img/01.jpg")
+	background-repeat: repeat, no-repeat, no-repeat
+	background-size: 100px 100px, cover, cover
+	background-position: top left, center center, center center
+	background-attachment: fixed
+	z-index: 3
+	#main-content-wrapper
+		left: 50%
+		padding: 2em
+		position: fixed
+		top: 50%
+		transform: translate(-50%, -50%)
+		z-index: 2
+		& > *
+			z-index: 1
+	#main-content
+		position: relative
+		max-width: 100%
+		min-width: 25em
+		padding: 4.5em 3em 3em 3em
+		background: #fff
+		border-radius: 5px
+		text-align: center
+		p
+			text-transform: uppercase
+		.avatar
+			display: block
+			margin-bottom: 1.5em
 			position: relative
-			width: 100vw
-		#first
-			background-image: url("../img/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../img/01.jpg")
-			background-image: url("../img/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../img/01.jpg")
-			background-repeat: repeat, no-repeat, no-repeat
-			background-size: 100px 100px, cover, cover
-			background-position: top left, center center, center center
-			background-attachment: fixed
-			z-index: 3
-			#main-content-wrapper
-				left: 50%
-				padding: 2em
-				position: fixed
-				top: 50%
-				transform: translate(-50%, -50%)
-				z-index: 2
-				& > *
-					z-index: 1
-				#main-content
-					position: relative
-					max-width: 100%
-					min-width: 25em
-					padding: 4.5em 3em 3em 3em
-					background: #fff
-					border-radius: 5px
-					text-align: center
-					p
-						text-transform: uppercase
-					.avatar
-						display: block
-						margin-bottom: 1.5em
-						position: relative
-						img
-							display: block
-							margin: 0 auto
-							border-radius: 100%
-							box-shadow: 0 0 0 1.5em #fff
-							width: 125px
-							height: 125px
-						&::before
-							background: #c8cccf
-							content: ''
-							height: 1px
-							left: -3em
-							position: absolute
-							top: 50%
-							width: calc(100% + 6em)
-							z-index: -1
-					footer
-						.icons
-							display: inline-block
-							padding: 0
-							margin: 0
-							li
-								display: inline-block
-								list-style: none
-								padding: 0.675em 0.5em
-								a
-									border: 1px solid #c8cccf
-									border-radius: 100%
-									display: block
-									height: 3.75em
-									overflow: hidden
-									position: relative
-									text-align: center
-									text-decoration: none
-									text-indent: 3.75em
-									transition: border-color .5s
-									white-space: nowrap
-									width: 3.75em
-									&:before
-										color: #fff
-										text-shadow: 1.25px 0 0 #c8cccf, -1.25px 0 0 #c8cccf, 0 1.25px 0 #c8cccf, 0 -0.25px 0 #c8cccf
-										position: absolute
-										top: 25%
-										left: 0
-										width: inherit
-										height: inherit
-										line-height: inherit
-										font-size: 1.85em
-										text-align: center
-										text-indent: 0
-										transition: text-shadow .5s
-									&:hover
-										border-color: #ff7496
-										&:before
-											text-shadow: 1.25px 0 0 #ff7496, -1.25px 0 0 #ff7496, 0 1.25px 0 #ff7496, 0 -0.25px 0 #ff7496
-		#second
-			background-image: url("../img/overlay.png"), -webkit-linear-gradient(60deg, rgba(#00A8C5, 0.5), rgba(#FFFF7E, 0.35)), url("../img/02.jpg")
-			background-image: url("../img/overlay.png"), linear-gradient(60deg, rgba(#00A8C5, 0.5), rgba(#FFFF7E, 0.35)), url("../img/02.jpg")
-			background-repeat: repeat, no-repeat, no-repeat
-			background-size: 100px 100px, cover, cover
-			background-position: top left, center center, center center
-			background-attachment: fixed
-			z-index: 4
-		#third
-			background-image: url("../img/overlay.png"), -webkit-linear-gradient(225deg, rgba(#D4145A, 0.4), rgba(#FBB03B, 0.5)), url("../img/03.jpg")
-			background-image: url("../img/overlay.png"), linear-gradient(225deg, rgba(#D4145A, 0.4), rgba(#FBB03B, 0.5)), url("../img/03.jpg")
-			background-repeat: repeat, no-repeat, no-repeat
-			background-size: 100px 100px, cover, cover
-			background-position: top left, center center, center center
-			background-attachment: fixed
-			z-index: 5
-		#forth
-			background-image: url("../img/overlay.png"), -webkit-linear-gradient(75deg, rgba(#123, 0.75), rgba(#f26, 0.25)), url("../img/04.jpg")
-			background-image: url("../img/overlay.png"), linear-gradient(75deg, rgba(#123, 0.75), rgba(#f26, 0.25)), url("../img/04.jpg")
-			background-repeat: repeat, no-repeat, no-repeat
-			background-size: 100px 100px, cover, cover
-			background-position: top left, center center, center center
-			background-attachment: fixed
-			z-index: 6
-			position: relative
-			#form-content-wrapper
-				left: 0
-				padding: 2em
+			img
+				display: block
+				margin: 0 auto
+				border-radius: 100%
+				box-shadow: 0 0 0 1.5em #fff
+				width: 125px
+				height: 125px
+			&::before
+				background: $gray
+				content: ''
+				height: 1px
+				left: -3em
 				position: absolute
 				top: 50%
-				transform: translateY(-50%)
-				width: 100%
-				z-index: 2
-				#form-content
-					background: #fff
-					border-radius: 5px
+				width: calc(100% + 6em)
+				z-index: -1
+		footer
+			.icons
+				display: inline-block
+				padding: 0
+				margin: 0
+				li
 					display: inline-block
-					left: 50%
-					max-width: 100%
-					padding: 3em
-					position: relative
-					text-align: center
-					width: 50%
-					form
-						margin: 0 0 1.5em 0
-						& > .field
-							margin: 0 0 1.5em 0
-							&:last-child
-								margin-bottom: 0
-						label
-							color: #313f47
-							display: block
-							font-size: 0.9em
-							margin: 0 0 0.75em 0
-						input[type="text"],
-						input[type="password"],
-						input[type="email"],
-						input[type="tel"],
-						select,
-						textarea
-							-moz-appearance: none
-							-webkit-appearance: none
-							-ms-appearance: none
-							appearance: none
-							border-radius: 5px
-							border: solid 1px #c8cccf
-							color: inherit
-							display: block
-							outline: 0
-							padding: 0 1em
-							text-decoration: none
-							width: 100%
-							&:invalid
-								box-shadow: none
-							&:focus
-								border-color: #ff7496
-						.select-wrapper
-							text-decoration: none
-							display: block
-							position: relative
+					list-style: none
+					padding: 0.675em 0.5em
+					a
+						border: 1px solid $gray
+						border-radius: 100%
+						display: block
+						height: 3.75em
+						overflow: hidden
+						position: relative
+						text-align: center
+						text-decoration: none
+						text-indent: 3.75em
+						transition: border-color .5s
+						white-space: nowrap
+						width: 3.75em
+						&:before
+							color: #fff
+							text-shadow: 1.25px 0 0 $gray, -1.25px 0 0 $gray, 0 1.25px 0 $gray, 0 -0.25px 0 $gray
+							position: absolute
+							top: 25%
+							left: 0
+							width: inherit
+							height: inherit
+							line-height: inherit
+							font-size: 1.85em
+							text-align: center
+							text-indent: 0
+							transition: text-shadow .5s
+						&:hover
+							border-color: $pink
 							&:before
-								color: #c8cccf
-								display: block
-								height: 2.75em
-								line-height: 2.75em
-								pointer-events: none
-								position: absolute
-								right: 0
-								text-align: center
-								top: 0
-								width: 2.75em
-							select::-ms-expand
-								display: none
-						input[type="text"],
-						input[type="password"],
-						input[type="email"],
-						select
-							height: 2.75em
-						textarea
-							padding: 0.75em 1em
-						input[type="checkbox"],
-						input[type="radio"]
-							-moz-appearance: none
-							-webkit-appearance: none
-							-ms-appearance: none
-							appearance: none
-							display: block
-							float: left
-							margin-right: -2em
-							opacity: 0
-							width: 1em
-							z-index: -1
-							& + label
-								text-decoration: none
-								color: #414f57
-								cursor: pointer
-								display: inline-block
-								font-size: 1em
-								font-weight: 300
-								padding-left: 2.4em
-								padding-right: 0.75em
-								position: relative
-								&:before
-									border-radius: 4px
-									border: solid 1px #c8cccf
-									content: ''
-									display: inline-block
-									height: 1.65em
-									left: 0
-									line-height: 1.58125em
-									position: absolute
-									text-align: center
-									top: 0.15em
-									width: 1.65em
-						input[type="checkbox"]:checked + label:before,
-						input[type="radio"]:checked + label:before
-							color: #ff7496
-							content: '\f00c'
-						input[type="checkbox"]:focus + label:before,
-						input[type="radio"]:focus + label:before
-							border-color: #ff7496
-						input[type="checkbox"] + label:before
-							border-radius: 4px
-						input[type="radio"] + label:before
-							border-radius: 100%
-						::-webkit-input-placeholder
-							color: #616f77 !important
-							opacity: 1.0
-						:-moz-placeholder 
-							color: #616f77 !important
-							opacity: 1.0
-						::-moz-placeholder
-							color: #616f77 !important
-							opacity: 1.0
-						:-ms-input-placeholder
-							color: #616f77 !important
-							opacity: 1.0
-	.controllers
-		.controller
-			cursor: pointer
-			height: 100vh
-			position: absolute
+								text-shadow: 1.25px 0 0 $pink, -1.25px 0 0 $pink, 0 1.25px 0 $pink, 0 -0.25px 0 $pink
+#second
+	background-image: url("../img/overlay.png"), -webkit-linear-gradient(60deg, rgba(#00A8C5, 0.5), rgba(#FFFF7E, 0.35)), url("../img/02.jpg")
+	background-image: url("../img/overlay.png"), linear-gradient(60deg, rgba(#00A8C5, 0.5), rgba(#FFFF7E, 0.35)), url("../img/02.jpg")
+	background-repeat: repeat, no-repeat, no-repeat
+	background-size: 100px 100px, cover, cover
+	background-position: top left, center center, center center
+	background-attachment: fixed
+	z-index: 4
+#third
+	background-image: url("../img/overlay.png"), -webkit-linear-gradient(225deg, rgba(#D4145A, 0.4), rgba(#FBB03B, 0.5)), url("../img/03.jpg")
+	background-image: url("../img/overlay.png"), linear-gradient(225deg, rgba(#D4145A, 0.4), rgba(#FBB03B, 0.5)), url("../img/03.jpg")
+	background-repeat: repeat, no-repeat, no-repeat
+	background-size: 100px 100px, cover, cover
+	background-position: top left, center center, center center
+	background-attachment: fixed
+	z-index: 5
+#forth
+	background-image: url("../img/overlay.png"), -webkit-linear-gradient(75deg, rgba(#123, 0.75), rgba(#f26, 0.25)), url("../img/04.jpg")
+	background-image: url("../img/overlay.png"), linear-gradient(75deg, rgba(#123, 0.75), rgba(#f26, 0.25)), url("../img/04.jpg")
+	background-repeat: repeat, no-repeat, no-repeat
+	background-size: 100px 100px, cover, cover
+	background-position: top left, center center, center center
+	background-attachment: fixed
+	z-index: 6
+	position: relative
+	#contacts
+		color: #fff
+		left: 0
+		padding: 2em 4em
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 50%
+		i
+			text-align: center
 			width: 30px
-			z-index: 10
-			i
-				color: #fff
-				font-size: 3em
-				position: absolute
-				top: 50%
-				transform: translateY(-50%)
-		#prev
-			background: linear-gradient(90deg, rgba(#000, .3), transparent)
-			left: 0
-			&:hover
-				background: linear-gradient(90deg, rgba(#000, .5), transparent)
-		#next
-			background: linear-gradient(270deg, rgba(#000, .3), transparent)
-			right: 0
-			&:hover
-				background: linear-gradient(270deg, rgba(#000, .5), transparent)
+		p
+			margin-left: 2.3em
+	#form-content-wrapper
+		left: 50%
+		padding: 2em
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 50%
+		z-index: 2
+		#form-content
+			background: #fff
+			border-radius: 5px
+			display: inline-block
+			max-width: 100%
+			padding: 3em
+			position: relative
+			text-align: center
+			width: 100%
+			form
+				margin: 0 0 1.5em 0
+				& > .field
+					margin: 0 0 1.5em 0
+					&:last-child
+						margin-bottom: 0
+				label
+					color: #313f47
+					display: block
+					font-size: 0.9em
+					margin: 0 0 0.75em 0
+				input[type="text"],
+				input[type="email"],
+				input[type="submit"],
+				textarea
+					-moz-appearance: none
+					-webkit-appearance: none
+					-ms-appearance: none
+					appearance: none
+					border-radius: 5px
+					border: solid 1px $gray
+					color: inherit
+					display: block
+					font-family: 'Open Sans', sans-serif
+					outline: 0
+					padding: 0 1em
+					text-decoration: none
+					width: 100%
+					&:invalid
+						box-shadow: none
+					&:focus
+						border-color: $pink
+				input[type="text"],
+				input[type="email"],
+				input[type="submit"],
+				select
+					height: 2.75em
+				textarea
+					padding: 0.75em 1em
+					resize: none
+				input[type="submit"]
+					background: transparent
+					cursor: pointer
+					transition: all .5s
+					&:hover
+						background: $pink
+						border-color: $pink
+						color: #fff
+				::-webkit-input-placeholder
+					color: #616f77 !important
+					opacity: 1.0
+				:-moz-placeholder 
+					color: #616f77 !important
+					opacity: 1.0
+				::-moz-placeholder
+					color: #616f77 !important
+					opacity: 1.0
+				:-ms-input-placeholder
+					color: #616f77 !important
+					opacity: 1.0
+.controllers
+	.controller
+		cursor: pointer
+		height: 100vh
+		position: absolute
+		width: 30px
+		z-index: 10
+		i
+			color: #fff
+			font-size: 3em
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+#prev
+	background: linear-gradient(90deg, rgba(#000, .3), transparent)
+	left: 0
+	&:hover
+		background: linear-gradient(90deg, rgba(#000, .5), transparent)
+#next
+	background: linear-gradient(270deg, rgba(#000, .3), transparent)
+	right: 0
+	&:hover
+		background: linear-gradient(270deg, rgba(#000, .5), transparent)
