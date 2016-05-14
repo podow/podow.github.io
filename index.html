@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Berdnikov Bogdan</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<div id="outerWrapper">
+		<div id="innerWrapper" style="left: 0px;">
+
+			<div class="slide" id="first">
+				<div id="main-content-wrapper">
+					<section id="main-content">
+						<header>
+							<span class="avatar">
+								<img src="http://cs621621.vk.me/v621621074/4527d/XypJHBSFjEk.jpg">
+							</span>
+							<h1>Бердников Богдан</h1>
+							<p>Начинающий веб разработчик</p>
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="fa fa-vk" target="_blank">Twitter</a></li>
+								<li><a href="#" class="fa fa-instagram" target="_blank">Instagram</a></li>
+								<li><a href="#" class="fa fa-github" target="_blank">Facebook</a></li>
+							</ul>
+						</footer>
+					</section>
+				</div>
+			</div>
+
+			<div class="slide" id="second"></div>
+
+			<div class="slide" id="third"></div>
+
+			<div class="slide" id="forth">
+				<div id="form-content-wrapper">
+					<section id="form-content">
+						<h1>Оставьте сообщение</h1>
+						<form method="post" action="#">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									<select name="department" id="department">
+										<option value="">Department</option>
+										<option value="sales">Sales</option>
+										<option value="tech">Tech Support</option>
+										<option value="null">/dev/null</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+							</div>
+							<div class="field">
+								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+							</div>
+							<div class="field">
+								<label>But are you a robot?</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							</div>
+							<div class="field">
+								<input type="submit" class="button" value="Get Started">
+							</div>
+						</form>
+					</section>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="controllers">
+			<div class="controller" id="prev">
+				<i class="fa fa-chevron-left"></i>
+			</div>
+			<div class="controller" id="next">
+				<i class="fa fa-chevron-right"></i>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/common.js"></script>
+</body>
+</html>
