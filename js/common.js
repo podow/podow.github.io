@@ -11,13 +11,13 @@ var now = 0,
 
   for (var i = 0; i < slidesNum; i++) {
     slides[i].width = sliderWrapper.clientWidth;
-    slides[i].height = sliderWrapper.clientHeight;
+    // slides[i].height = sliderWrapper.clientHeight;
     sliderOffsetWidth.push(-i * slides[i].width + 'px');
-    sliderOffsetHeight.push(-i * slides[i].height + 'px');
+    // sliderOffsetHeight.push(-i * slides[i].height + 'px');
   }
 
   console.log(sliderOffsetWidth);
-  console.log(sliderOffsetHeight);
+  // console.log(sliderOffsetHeight);
 
   document.addEventListener('keydown', function (event) {
     if (event.which == '37') {

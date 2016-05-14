@@ -133,126 +133,162 @@ h3 {
               text-shadow: 1.25px 0 0 #ff7496, -1.25px 0 0 #ff7496, 0 1.25px 0 #ff7496, 0 -0.25px 0 #ff7496; }
 
 #second {
-  background-image: url("../img/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 168, 197, 0.5), rgba(255, 255, 126, 0.35)), url("../img/02.jpg");
-  background-image: url("../img/overlay.png"), linear-gradient(60deg, rgba(0, 168, 197, 0.5), rgba(255, 255, 126, 0.35)), url("../img/02.jpg");
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-size: 100px 100px, cover, cover;
-  background-position: top left, center center, center center;
-  background-attachment: fixed;
-  z-index: 4; }
-
-#third {
   background-image: url("../img/overlay.png"), -webkit-linear-gradient(225deg, rgba(212, 20, 90, 0.4), rgba(251, 176, 59, 0.5)), url("../img/03.jpg");
   background-image: url("../img/overlay.png"), linear-gradient(225deg, rgba(212, 20, 90, 0.4), rgba(251, 176, 59, 0.5)), url("../img/03.jpg");
   background-repeat: repeat, no-repeat, no-repeat;
   background-size: 100px 100px, cover, cover;
   background-position: top left, center center, center center;
   background-attachment: fixed;
-  z-index: 5; }
+  z-index: 4; }
 
-#forth {
+#works {
+  height: 100%; }
+  #works .work {
+    cursor: pointer;
+    float: left;
+    height: 0;
+    opacity: 0.7;
+    overflow: hidden;
+    padding-bottom: 25%;
+    position: relative;
+    width: 20%;
+    transition: all 0.5s; }
+    #works .work img {
+      left: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: filter 0.5s, transform 1s; }
+    #works .work:hover img {
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
+    #works .work .desc {
+      color: #fff;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%; }
+      #works .work .desc a {
+        color: #fff;
+        display: inline-block;
+        padding: 5px;
+        border: 1px solid #fff;
+        text-decoration: none;
+        transition: background 0.5s, color 0.5s; }
+        #works .work .desc a:hover {
+          background: #fff;
+          color: #000; }
+
+#third {
   background-image: url("../img/overlay.png"), -webkit-linear-gradient(75deg, rgba(17, 34, 51, 0.75), rgba(255, 34, 102, 0.25)), url("../img/04.jpg");
   background-image: url("../img/overlay.png"), linear-gradient(75deg, rgba(17, 34, 51, 0.75), rgba(255, 34, 102, 0.25)), url("../img/04.jpg");
   background-repeat: repeat, no-repeat, no-repeat;
   background-size: 100px 100px, cover, cover;
   background-position: top left, center center, center center;
   background-attachment: fixed;
-  z-index: 6;
+  z-index: 5;
   position: relative; }
-  #forth #contacts {
-    color: #fff;
-    left: 0;
-    padding: 2em 4em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%; }
-    #forth #contacts i {
-      text-align: center;
-      width: 30px; }
-    #forth #contacts p {
-      margin-left: 2.3em; }
-  #forth #form-content-wrapper {
-    left: 50%;
-    padding: 2em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%;
-    z-index: 2; }
-    #forth #form-content-wrapper #form-content {
-      background: #fff;
+
+#contacts {
+  color: #fff;
+  left: 0;
+  padding: 2em 4em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%; }
+  #contacts i {
+    text-align: center;
+    width: 30px; }
+  #contacts p {
+    margin-left: 2.3em; }
+
+#form-content-wrapper {
+  left: 50%;
+  padding: 2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: 2; }
+
+#form-content {
+  background: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 100%;
+  padding: 3em;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+  #form-content form {
+    margin: 0 0 1.5em 0;
+    -moz-placeholder-color: #616f77 !important;
+    -moz-placeholder-opacity: 1;
+    -ms-input-placeholder-color: #616f77 !important;
+    -ms-input-placeholder-opacity: 1; }
+    #form-content form > .field {
+      margin: 0 0 1.5em 0; }
+      #form-content form > .field:last-child {
+        margin-bottom: 0; }
+    #form-content form label {
+      color: #313f47;
+      display: block;
+      font-size: 0.9em;
+      margin: 0 0 0.75em 0; }
+    #form-content form input[type="text"],
+    #form-content form input[type="email"],
+    #form-content form input[type="submit"],
+    #form-content form textarea {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
       border-radius: 5px;
-      display: inline-block;
-      max-width: 100%;
-      padding: 3em;
-      position: relative;
-      text-align: center;
+      border: solid 1px #c8cccf;
+      color: inherit;
+      display: block;
+      font-family: "Open Sans", sans-serif;
+      outline: 0;
+      padding: 0 1em;
+      text-decoration: none;
       width: 100%; }
-      #forth #form-content-wrapper #form-content form {
-        margin: 0 0 1.5em 0;
-        -moz-placeholder-color: #616f77 !important;
-        -moz-placeholder-opacity: 1;
-        -ms-input-placeholder-color: #616f77 !important;
-        -ms-input-placeholder-opacity: 1; }
-        #forth #form-content-wrapper #form-content form > .field {
-          margin: 0 0 1.5em 0; }
-          #forth #form-content-wrapper #form-content form > .field:last-child {
-            margin-bottom: 0; }
-        #forth #form-content-wrapper #form-content form label {
-          color: #313f47;
-          display: block;
-          font-size: 0.9em;
-          margin: 0 0 0.75em 0; }
-        #forth #form-content-wrapper #form-content form input[type="text"],
-        #forth #form-content-wrapper #form-content form input[type="email"],
-        #forth #form-content-wrapper #form-content form input[type="submit"],
-        #forth #form-content-wrapper #form-content form textarea {
-          -moz-appearance: none;
-          -webkit-appearance: none;
-          -ms-appearance: none;
-          appearance: none;
-          border-radius: 5px;
-          border: solid 1px #c8cccf;
-          color: inherit;
-          display: block;
-          font-family: "Open Sans", sans-serif;
-          outline: 0;
-          padding: 0 1em;
-          text-decoration: none;
-          width: 100%; }
-          #forth #form-content-wrapper #form-content form input[type="text"]:invalid,
-          #forth #form-content-wrapper #form-content form input[type="email"]:invalid,
-          #forth #form-content-wrapper #form-content form input[type="submit"]:invalid,
-          #forth #form-content-wrapper #form-content form textarea:invalid {
-            box-shadow: none; }
-          #forth #form-content-wrapper #form-content form input[type="text"]:focus,
-          #forth #form-content-wrapper #form-content form input[type="email"]:focus,
-          #forth #form-content-wrapper #form-content form input[type="submit"]:focus,
-          #forth #form-content-wrapper #form-content form textarea:focus {
-            border-color: #ff7496; }
-        #forth #form-content-wrapper #form-content form input[type="text"],
-        #forth #form-content-wrapper #form-content form input[type="email"],
-        #forth #form-content-wrapper #form-content form input[type="submit"],
-        #forth #form-content-wrapper #form-content form select {
-          height: 2.75em; }
-        #forth #form-content-wrapper #form-content form textarea {
-          padding: 0.75em 1em;
-          resize: none; }
-        #forth #form-content-wrapper #form-content form input[type="submit"] {
-          background: transparent;
-          cursor: pointer;
-          transition: all 0.5s; }
-          #forth #form-content-wrapper #form-content form input[type="submit"]:hover {
-            background: #ff7496;
-            border-color: #ff7496;
-            color: #fff; }
-        #forth #form-content-wrapper #form-content form ::-webkit-input-placeholder {
-          color: #616f77 !important;
-          opacity: 1; }
-        #forth #form-content-wrapper #form-content form ::-moz-placeholder {
-          color: #616f77 !important;
-          opacity: 1; }
+      #form-content form input[type="text"]:invalid,
+      #form-content form input[type="email"]:invalid,
+      #form-content form input[type="submit"]:invalid,
+      #form-content form textarea:invalid {
+        box-shadow: none; }
+      #form-content form input[type="text"]:focus,
+      #form-content form input[type="email"]:focus,
+      #form-content form input[type="submit"]:focus,
+      #form-content form textarea:focus {
+        border-color: #ff7496; }
+    #form-content form input[type="text"],
+    #form-content form input[type="email"],
+    #form-content form input[type="submit"],
+    #form-content form select {
+      height: 2.75em; }
+    #form-content form textarea {
+      padding: 0.75em 1em;
+      resize: none; }
+    #form-content form input[type="submit"] {
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.5s; }
+      #form-content form input[type="submit"]:hover {
+        background: #ff7496;
+        border-color: #ff7496;
+        color: #fff; }
+    #form-content form ::-webkit-input-placeholder {
+      color: #616f77 !important;
+      opacity: 1; }
+    #form-content form ::-moz-placeholder {
+      color: #616f77 !important;
+      opacity: 1; }
 
 .controllers .controller {
   cursor: pointer;
