@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		body {
+			background: linear-gradient(45deg, #f26, #123);
+		}
+	</style>
+</head>
+<body>
+	<div class="enter-form">
+		<h2>Вход в админ панель</h2>
+		<form action="#">
+			<div class="field"><input type="text" class="login"></div>
+			<div class="field"><input type="password" class="pass"></div>
+			<div class="field"><button class="btn">Войти</button></div>
+		</form>
+	</div>
+	<div class="form-wrapper not_visible">
+		<h2>Добавить новый проект</h2>
+		<form action="/write.php" method="POST" id="write">
+			<div class="field">
+				<input type="file" name="image" />
+			</div>
+			<div class="field">
+				<input type="text" placeholder="Заголовок" name="title" />
+			</div>
+			<div class="field">
+				<textarea name="desc" rows="15" placeholder="Описание"></textarea>
+			</div>
+			<div class="field">
+				<input type="text" placeholder="Ссылка" name="link" />
+			</div>
+			<div class="field">
+				<input type="submit" placeholder="Готово" name="done" />
+			</div>
+		</form>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="js/form.js"></script>
+</body>
+</html>

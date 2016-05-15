@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" ng-app="main">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Berdnikov Bogdan</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body ng-controller="mainCtrl">
 
 	<div id="outerWrapper">
 		<div id="innerWrapper" style="left: 0px;">
@@ -34,12 +34,12 @@
 
 			<div class="slide" id="second">
 				<div id="works">
-					<div class="work">
-						<img src="img/01.jpg" alt="">
+					<div class="work" ng-repeat="work in works">
+						<img ng-src="{{ work.img }}" alt="">
 						<div class="desc">
-							<h2>Далеко-далеко за.</h2>
-							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Осталось скатился текста домах она.</p>
-							<a href="#">Посмотреть</a>
+							<h2>{{ work.title }}</h2>
+							<p>{{ work.desc }}</p>
+							<a href="{{ work.link }}">Посмотреть</a>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 				<div id="form-content-wrapper">
 					<section id="form-content">
 						<h3>Оставьте сообщение</h3>
-						<form method="post" action="#">
+						<form method="post" action="mail.php" id="form">
 							<div class="field">
 								<input type="text" name="name" id="name" placeholder="Имя" />
 							</div>
@@ -75,6 +75,7 @@
 								<input type="submit" class="button" value="Отправить">
 							</div>
 						</form>
+						<div id="mail" class="not_visible"></div>
 					</section>
 				</div>
 
@@ -82,17 +83,24 @@
 
 		</div>
 
-		<div class="controllers">
+		<!-- <div class="controllers">
 			<div class="controller" id="prev">
 				<i class="fa fa-chevron-left"></i>
 			</div>
 			<div class="controller" id="next">
 				<i class="fa fa-chevron-right"></i>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
-
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script>
+		$("img, a").on("dragstart", function (event) { event.preventDefault(); });
+	</script>
+	<script src="js/controller.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/form.js"></script>
 </body>
 </html>
