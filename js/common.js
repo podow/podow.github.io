@@ -5,6 +5,16 @@ var sliderWrapper = document.querySelector('#outerWrapper'),
 	prevBtn = document.getElementById('prev'),
 	nextBtn = document.getElementById('next');
 
+var enter = document.getElementById('enter');
+
+	setTimeout(function(){
+		enter.style.top = '3%';
+	}, 2500)
+
+	setTimeout(function(){
+		enter.style.opacity = '0';
+	}, 5000)
+
 var now = 0,
 	sliderOffsetWidth = [],
 	sliderOffsetHeight = [];
