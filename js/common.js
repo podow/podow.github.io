@@ -11,13 +11,10 @@ var now = 0,
 
 for (var i = 0; i < slidesNum; i++) {
 	slides[i].width = sliderWrapper.clientWidth;
-	// slides[i].height = sliderWrapper.clientHeight;
 	sliderOffsetWidth.push(-i * slides[i].width + 'px');
-	// sliderOffsetHeight.push(-i * slides[i].height + 'px');
 }
 
 console.log(sliderOffsetWidth);
-// console.log(sliderOffsetHeight);
 
 document.addEventListener('keydown', function (event) {
 	if (event.which == '37') {
@@ -29,6 +26,25 @@ document.addEventListener('keydown', function (event) {
 		if (now > slidesNum - 1) now = 0;
 		slider.style.left = sliderOffsetWidth[now];
 	}
+});
+
+var body = document.body;
+var mc = new Hammer(body);
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+// mc.on("panleft panright panup pandown tap press", function(ev) {
+//     console.log(ev.type +" gesture detected.");
+// });
+
+mc.on("panleft", function(ev) {
+	++now;
+	if (now > slidesNum - 1) now = 0;
+	slider.style.left = sliderOffsetWidth[now];
+});
+mc.on("panright", function(ev) {
+	--now;
+	if (now < 0) now = slidesNum - 1;
+	slider.style.left = sliderOffsetWidth[now];
 });
 
 // nextBtn.addEventListener('click', function () {
