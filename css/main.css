@@ -157,7 +157,7 @@ h3 {
     float: left;
     height: 0;
     overflow: hidden;
-    padding-bottom: calc(25% - 1px);
+    padding-bottom: 50vh;
     position: relative;
     width: 20%;
     transition: all 0.5s; }
@@ -172,7 +172,7 @@ h3 {
       z-index: 1; }
     #works .work img {
       left: 0;
-      height: 100%;
+      width: 100%;
       position: absolute;
       top: 0;
       transition: filter 1s, transform 1s, opacity 0.5s; }
@@ -311,12 +311,10 @@ h3 {
 
 @media only screen and (max-width: 992px) {
   #works .work {
-    width: 33.33%;
-    padding-bottom: calc(35% - 1px); } }
+    width: 33.33%; } }
 @media only screen and (max-width: 768px) {
   #works .work {
-    width: 50%;
-    padding-bottom: calc(50% - 1px); }
+    width: 50%; }
 
   #form-content-wrapper {
     left: 0;
@@ -326,8 +324,9 @@ h3 {
     display: none; } }
 @media only screen and (max-width: 480px) {
   #works .work {
-    width: 100%;
-    padding-bottom: calc(75% - 1px); }
+    width: 100%; }
+    #works .work .desc {
+      padding: 5%; }
 
   #form-content-wrapper {
     padding: 0; } }
