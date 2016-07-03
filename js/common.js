@@ -36,12 +36,12 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 //     console.log(ev.type +" gesture detected.");
 // });
 
-mc.on("panleft", function(ev) {
+mc.on("swipeleft", function(ev) {
 	++now;
 	if (now > slidesNum - 1) now = 0;
 	slider.style.left = sliderOffsetWidth[now];
 });
-mc.on("panright", function(ev) {
+mc.on("swiperight", function(ev) {
 	--now;
 	if (now < 0) now = slidesNum - 1;
 	slider.style.left = sliderOffsetWidth[now];
