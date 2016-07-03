@@ -280,6 +280,7 @@ h3
 		select
 			height: 2.75em
 		textarea
+			height: 50vh
 			padding: 0.75em 1em
 			resize: none
 		input[type="submit"]
@@ -302,73 +303,29 @@ h3
 		:-ms-input-placeholder
 			color: #616f77 !important
 			opacity: 1.0
-.controllers
-	.controller
-		cursor: pointer
-		height: 100vh
-		position: absolute
-		width: 30px
-		z-index: 10
-		i
-			color: #fff
-			font-size: 3em
-			+vertical-align(absolute)
-#prev
-	background: linear-gradient(90deg, rgba(#000, .3), transparent)
-	left: 0
-	&:hover
-		background: linear-gradient(90deg, rgba(#000, .5), transparent)
-#next
-	background: linear-gradient(270deg, rgba(#000, .3), transparent)
-	right: 0
-	&:hover
-		background: linear-gradient(270deg, rgba(#000, .5), transparent)
 
-.not_visible
-	display: none
-	opacity: 0
-	visibility: hidden
+@media only screen and (max-width : 1200px)
 
-.form-wrapper,
-.enter-form
-	background: #fff
-	border-radius: 5px
-	margin: auto
-	padding: 2em
-	width: 30%
-	+vertical-align(relative)
-	h2
-		text-align: center
-	.field
-		margin: 1em
-		input:focus,
-		button:focus,
-		textarea:focus
-			outline: none
-		input[type="text"],
-		input[type="password"],
-		textarea
-			border: 1px solid $gray
-			border-radius: 5px
-			font-size: 14px
-			padding: 10px 15px
-			width: 100%
-			&:focus
-				border-color: $pink
-		textarea
-			resize: none
-		.btn,
-		input[type="submit"]
-			background: transparent
-			border: 1px solid $gray
-			border-radius: 5px
-			cursor: pointer
-			display: block
-			font-size: 14px
-			margin: auto
-			padding: 10px 15px
-			transition: all .5s
-			&:hover
-				color: #fff
-				background: $pink
-				border-color: $pink
+@media only screen and (max-width : 992px)
+	#works .work
+		width: 33.33%
+		padding-bottom: calc(35% - 1px)
+
+@media only screen and (max-width : 768px)
+	#works .work
+		width: 50%
+		padding-bottom: calc(50% - 1px)
+	#form-content-wrapper
+		left: 0
+		width: 100%
+	#contacts
+		display: none
+
+@media only screen and (max-width : 480px)
+	#works .work
+		width: 100%
+		padding-bottom: calc(75% - 1px)
+	#form-content-wrapper
+		padding: 0
+
+@media only screen and (max-width : 320px)

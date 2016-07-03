@@ -291,6 +291,7 @@ h3 {
     #form-content form select {
       height: 2.75em; }
     #form-content form textarea {
+      height: 50vh;
       padding: 0.75em 1em;
       resize: none; }
     #form-content form input[type="submit"] {
@@ -308,99 +309,27 @@ h3 {
       color: #616f77 !important;
       opacity: 1; }
 
-.controllers .controller {
-  cursor: pointer;
-  height: 100vh;
-  position: absolute;
-  width: 30px;
-  z-index: 10; }
-  .controllers .controller i {
-    color: #fff;
-    font-size: 3em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+@media only screen and (max-width: 992px) {
+  #works .work {
+    width: 33.33%;
+    padding-bottom: calc(35% - 1px); } }
+@media only screen and (max-width: 768px) {
+  #works .work {
+    width: 50%;
+    padding-bottom: calc(50% - 1px); }
 
-#prev {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), transparent);
-  left: 0; }
-  #prev:hover {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), transparent); }
+  #form-content-wrapper {
+    left: 0;
+    width: 100%; }
 
-#next {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.3), transparent);
-  right: 0; }
-  #next:hover {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0.5), transparent); }
+  #contacts {
+    display: none; } }
+@media only screen and (max-width: 480px) {
+  #works .work {
+    width: 100%;
+    padding-bottom: calc(75% - 1px); }
 
-.not_visible {
-  display: none;
-  opacity: 0;
-  visibility: hidden; }
-
-.form-wrapper,
-.enter-form {
-  background: #fff;
-  border-radius: 5px;
-  margin: auto;
-  padding: 2em;
-  width: 30%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
-  .form-wrapper h2,
-  .enter-form h2 {
-    text-align: center; }
-  .form-wrapper .field,
-  .enter-form .field {
-    margin: 1em; }
-    .form-wrapper .field input:focus,
-    .form-wrapper .field button:focus,
-    .form-wrapper .field textarea:focus,
-    .enter-form .field input:focus,
-    .enter-form .field button:focus,
-    .enter-form .field textarea:focus {
-      outline: none; }
-    .form-wrapper .field input[type="text"],
-    .form-wrapper .field input[type="password"],
-    .form-wrapper .field textarea,
-    .enter-form .field input[type="text"],
-    .enter-form .field input[type="password"],
-    .enter-form .field textarea {
-      border: 1px solid #c8cccf;
-      border-radius: 5px;
-      font-size: 14px;
-      padding: 10px 15px;
-      width: 100%; }
-      .form-wrapper .field input[type="text"]:focus,
-      .form-wrapper .field input[type="password"]:focus,
-      .form-wrapper .field textarea:focus,
-      .enter-form .field input[type="text"]:focus,
-      .enter-form .field input[type="password"]:focus,
-      .enter-form .field textarea:focus {
-        border-color: #ff7496; }
-    .form-wrapper .field textarea,
-    .enter-form .field textarea {
-      resize: none; }
-    .form-wrapper .field .btn,
-    .form-wrapper .field input[type="submit"],
-    .enter-form .field .btn,
-    .enter-form .field input[type="submit"] {
-      background: transparent;
-      border: 1px solid #c8cccf;
-      border-radius: 5px;
-      cursor: pointer;
-      display: block;
-      font-size: 14px;
-      margin: auto;
-      padding: 10px 15px;
-      transition: all 0.5s; }
-      .form-wrapper .field .btn:hover,
-      .form-wrapper .field input[type="submit"]:hover,
-      .enter-form .field .btn:hover,
-      .enter-form .field input[type="submit"]:hover {
-        color: #fff;
-        background: #ff7496;
-        border-color: #ff7496; }
+  #form-content-wrapper {
+    padding: 0; } }
 
 /*# sourceMappingURL=main.css.map */

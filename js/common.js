@@ -28,13 +28,8 @@ document.addEventListener('keydown', function (event) {
 	}
 });
 
-var body = document.body;
-var mc = new Hammer(body);
+var mc = new Hammer(document.body);
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-// mc.on("panleft panright panup pandown tap press", function(ev) {
-//     console.log(ev.type +" gesture detected.");
-// });
 
 mc.on("swipeleft", function(ev) {
 	++now;
@@ -46,15 +41,3 @@ mc.on("swiperight", function(ev) {
 	if (now < 0) now = slidesNum - 1;
 	slider.style.left = sliderOffsetWidth[now];
 });
-
-// nextBtn.addEventListener('click', function () {
-// 	++now;
-// 	if (now > slidesNum - 1) now = 0;
-// 	slider.style.left = sliderOffsetWidth[now];
-// });
-
-// prevBtn.addEventListener('click', function () {
-// 	--now;
-// 	if (now < 0) now = slidesNum - 1;
-// 	slider.style.left = sliderOffsetWidth[now];
-// });
