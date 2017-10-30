@@ -176,7 +176,7 @@ h3 {
     width: 20%;
     transition: all 0.5s; }
     #works .work:after {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5);
       content: "";
       height: 100%;
       left: 0;
@@ -203,7 +203,9 @@ h3 {
       top: 50%;
       transform: translateY(-50%);
       width: 100%;
-      z-index: 2; }
+      z-index: 2;
+      padding: 0 15px 30px;
+      background: rgba(0, 0, 0, .5); }
       #works .work .desc a {
         color: #fff;
         display: inline-block;
@@ -225,26 +227,12 @@ h3 {
   z-index: 5;
   position: relative; }
 
-#contacts {
-  color: #fff;
-  left: 0;
-  padding: 2em 4em;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%; }
-  #contacts i {
-    text-align: center;
-    width: 30px; }
-  #contacts p {
-    margin-left: 2.3em; }
-
 #form-content-wrapper {
   left: 50%;
   padding: 2em;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   width: 50%;
   z-index: 2; }
 
